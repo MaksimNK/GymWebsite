@@ -1,0 +1,202 @@
+/* styles.css (или любое другое имя) */
+
+/* Navbar styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+
+    background-color: #333; /* Задайте цвет фона вашего навбара */
+    padding: 15px 0; /* Добавьте отступы сверху и снизу для контента навбара */
+    display: flex; /* Используйте flexbox для размещения элементов в строку */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание элементов по центру вертикально */
+}
+
+.navbar-brand {
+    color: #fff; /* Цвет текста вашего бренда */
+    font-size: 1.5em; /* Размер шрифта вашего бренда */
+    text-decoration: none; /* Уберите подчеркивание для ссылки */
+}
+
+.navbar-toggler {
+    color: #fff; /* Цвет иконки бургера */
+    border: none; /* Уберите границу */
+}
+
+/* Navbar links */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Сделайте .navbar-nav справа от .navbar-brand */
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+
+    margin-right: 15px; /* Расстояние между элементами меню */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Цвет текста ссылок */
+    font-size: 1em; /* Размер шрифта ссылок */
+    text-decoration: none; /* Уберите подчеркивание для ссылок */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Цвет текста при наведении */
+}
+
+.masthead {
+    background-image: url("/img/header-bg.jpg");
+    height: 500px; /* Высота на весь экран */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.intro-text {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.intro-lead-in {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.intro-heading {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #ffcc00;
+    border-color: #ffcc00;
+    color: #333;
+    font-size: 18px;
+    padding: 15px 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border-radius: 5px ;
+    text-decoration: none;
+
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+/* Добавьте следующие стили в ваш файл стилей */
+
+#abonnements {
+    padding: 50px 0;
+}
+
+#abonnements .section-heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#abonnements .text-muted {
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+
+#abonnements .card {
+    border: 2px solid #ffcc00; /* Желтая обводка */
+    border-radius: 10px; /* Скругление углов */
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 15px; /* Расстояние между карточками */
+    width: 250px; /* Ширина карточки (подберите под свои нужды) */
+    margin: 0 15px; /* Расстояние между карточками */
+}
+
+#abonnements .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.7); /* Тень при наведении */
+    border: 2px solid #ffcc00; /* Желтая обводка */
+}
+
+#abonnements .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#abonnements .card-text {
+    font-size: 1rem;
+}
+
+/* Опционально: Добавьте стили для анимации при наведении на карточку */
+#abonnements .card:hover .card-body {
+    background-color: #f8f9fa; /* Легкое изменение цвета фона при наведении */
+}
+#abonnements .row {
+    display: flex;
+    justify-content: center; /* Центрирование контейнеров по горизонтали */
+}
+
+/* Добавьте следующие стили в ваш файл стилей */
+
+footer {
+    padding: 50px 0;
+    background-color: #343a40; /* Цвет фона футера */
+    color: #ffffff; /* Цвет текста в футере */
+}
+
+footer h4 {
+    color: #ffcc00; /* Цвет заголовков */
+}
+
+footer p {
+    color: #ffffff;
+    width: 100%; /* Растягиваем текст на всю ширину */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer button {
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+footer button:hover {
+    text-decoration: underline;
+}
+
+hr {
+    background-color: #ffcc00;
+    height: 1px;
+    margin: 20px 0;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}

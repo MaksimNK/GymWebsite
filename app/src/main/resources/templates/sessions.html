@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Sessions</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" th:href="@{/home}">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/purchase}">Подписки</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/sessions}">Тренировки</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/sessions/create}">Добавить тренировку</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/purchase/history}">История подписок</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/notifications}">Уведомления</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/auth/logout}">Выйти</a></li>
+        </ul>
+    </div>
+</nav>
+
+<h2>Мои тренировки</h2>
+
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Тренер</th>
+        <th>Время</th>
+        <th>Описание</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mySession : ${mySessions}">
+        <td th:text="${mySession.trainer.name}"></td>
+        <td th:text="${mySession.dateTime}"></td>
+        <td th:text="${mySession.description}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<div class ="section-empty"></div>
+
+
+<footer class="bg-dark text-white d-flex justify-content-between align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Социальные сети</h4>
+                <ul class="list-unstyled d-flex">
+                    <li><button type="button">Facebook</button></li>
+                    <li><button type="button">Twitter</button></li>
+                    <li><button type="button">Instagram</button></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>О нас</h4>
+                <p>Наша миссия - предоставить лучшие услуги по фитнесу и заботиться о вашем здоровье.</p>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>&copy; 2023 Ваша Компания. Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

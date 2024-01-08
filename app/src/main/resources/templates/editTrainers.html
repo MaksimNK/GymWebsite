@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Users</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" th:href="@{/admin/home}">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/admin/editUsers}">Пользователи</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/admin/addAdmin}">Добавить администратора</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/admin/addTrainer}">Добавить тренира</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/admin/editTrainer}">Тренеры</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/admin/createNotification}">Уведомления</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/auth/logout}">Выйти</a></li>
+        </ul>
+    </div>
+</nav>
+
+<h2>Edit Users</h2>
+
+<!-- Выводим список пользователей -->
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Specialization</th>
+
+        <!-- Другие поля, если необходимо -->
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Итерируем по списку пользователей и выводим информацию -->
+    <tr th:each="trainer : ${trainers}">
+        <td th:text="${trainer.id}"></td>
+        <td th:text="${trainer.name}"></td>
+        <td th:text="${trainer.specialization}"></td>
+
+        <!-- Другие поля, если необходимо -->
+        <td>
+            <!-- Форма для удаления пользователя -->
+            <form th:action="@{/admin/deleteTrainer}" method="post">
+                <input type="hidden" name="trainerId" th:value="${trainer.id}">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class ="section-empty"></div>
+
+
+<footer class="bg-dark text-white d-flex justify-content-between align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Социальные сети</h4>
+                <ul class="list-unstyled d-flex">
+                    <li><button type="button">Facebook</button></li>
+                    <li><button type="button">Twitter</button></li>
+                    <li><button type="button">Instagram</button></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>О нас</h4>
+                <p>Наша миссия - предоставить лучшие услуги по фитнесу и заботиться о вашем здоровье.</p>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>&copy; 2023 Ваша Компания. Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* loginPage.css */
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+
+    background-color: #333; /* Задайте цвет фона вашего навбара */
+    padding: 15px 0; /* Добавьте отступы сверху и снизу для контента навбара */
+    display: flex; /* Используйте flexbox для размещения элементов в строку */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание элементов по центру вертикально */
+}
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Сделайте .navbar-nav справа от .navbar-brand */
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+
+    margin-right: 15px; /* Расстояние между элементами меню */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Цвет текста ссылок */
+    font-size: 1em; /* Размер шрифта ссылок */
+    text-decoration: none; /* Уберите подчеркивание для ссылок */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Цвет текста при наведении */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 50px;
+    background-color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px; /* Уменьшаем отступ снизу */
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Вычитаем отступы слева и справа */
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: calc(100%);
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+footer {
+    padding: 50px 0;
+    background-color: #343a40; /* Цвет фона футера */
+    color: #ffffff; /* Цвет текста в футере */
+}
+
+footer h4 {
+    color: #ffcc00; /* Цвет заголовков */
+}
+
+footer p {
+    color: #ffffff;
+    width: 100%; /* Растягиваем текст на всю ширину */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer button {
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+footer button:hover {
+    text-decoration: underline;
+}
+
+hr {
+    background-color: #ffcc00;
+    height: 1px;
+    margin: 20px 0;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+.section-empty{
+    height: 30vw;
+}

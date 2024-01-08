@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+  <link rel="stylesheet" th:href="@{/css/loginPage.css}">
+
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" th:href="@{/}">Главная</a></li>
+      <li class="nav-item"><a class="nav-link" th:href="@{/auth/login}">Войти</a></li>
+      <li><a th:href="@{/auth/registration}">Регистрация</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="login-container">
+
+<form th:method="POST" th:action="@{/auth/registration}" th:object="${user}">
+  <label for="username">Введите имя пользователя: </label>
+  <input type="text" th:field="*{username}" id="username"/>
+  <div style="color:red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</div>
+  <br/>
+  <label for="email">Введите cвой email: </label>
+  <input type="text" th:field="*{email}" id="email"/>
+  <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error
+  </div>
+  <br/>
+  <label for="dateOfBirth">Введите cвой день рождения: </label>
+  <input type="date" th:field="*{dateOfBirth}" id="dateOfBirth"/>
+  <div style="color:red" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">Date Error
+  </div>
+  <br/>
+  <label for="fullName">Введите имя фамилию: </label>
+  <input type="text" th:field="*{fullName}" id="fullName"/>
+  <div style="color:red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">Name Error
+  </div>
+  <br/>
+  <label for="password">Введите пароль: </label>
+  <input type="password" th:field="*{password}" id="password"/>
+  <div style="color:red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</div>
+  <br/>
+  <input type="submit" value="Sign up!"/>
+</form>
+</div>
+
+</body>
+</html>

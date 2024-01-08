@@ -1,0 +1,295 @@
+body{
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.navbar {
+
+    background-color: #333; /* Задайте цвет фона вашего навбара */
+    padding: 15px 0; /* Добавьте отступы сверху и снизу для контента навбара */
+    display: flex; /* Используйте flexbox для размещения элементов в строку */
+    justify-content: space-between; /* Равномерное распределение пространства между элементами */
+    align-items: center; /* Выравнивание элементов по центру вертикально */
+}
+
+.navbar-brand {
+    color: #fff; /* Цвет текста вашего бренда */
+    font-size: 1.5em; /* Размер шрифта вашего бренда */
+    text-decoration: none; /* Уберите подчеркивание для ссылки */
+}
+
+.navbar-toggler {
+    color: #fff; /* Цвет иконки бургера */
+    border: none; /* Уберите границу */
+}
+
+/* Navbar links */
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Сделайте .navbar-nav справа от .navbar-brand */
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+
+    margin-right: 15px; /* Расстояние между элементами меню */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Цвет текста ссылок */
+    font-size: 1em; /* Размер шрифта ссылок */
+    text-decoration: none; /* Уберите подчеркивание для ссылок */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00; /* Цвет текста при наведении */
+}
+
+
+.subscription-section, .no-subscription-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.buy-subscription-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buy-subscription-button:hover {
+    background-color: #0056b3;
+}
+
+.hello {
+    text-align: center;
+    margin-top: 20px; /* Добавим отступ сверху для разделения от навбара */
+    color: #333; /* Цвет текста */
+}
+
+.welcome-section {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.welcome-section h3 {
+    color: #333; /* Цвет заголовка */
+}
+
+.welcome-section p {
+    color: #666; /* Цвет текста */
+    font-size: 1.1em; /* Размер шрифта текста */
+    line-height: 1.5; /* Межстрочный интервал для лучшей читаемости */
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #343a40; /* Цвет фона футера */
+    color: #ffffff; /* Цвет текста в футере */
+}
+
+footer h4 {
+    color: #ffcc00; /* Цвет заголовков */
+}
+
+footer p {
+    color: #ffffff;
+    width: 100%; /* Растягиваем текст на всю ширину */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer button {
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+footer button:hover {
+    text-decoration: underline;
+}
+
+hr {
+    background-color: #ffcc00;
+    height: 1px;
+    margin: 20px 0;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+.purchase-form-section {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+
+    height: 30vw;
+}
+
+/* Style for the heading */
+.purchase-form-section h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style for the form */
+.purchase-form-section form {
+    margin-top: 15px;
+}
+
+/* Style for the labels */
+.purchase-form-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style for the select dropdown */
+.purchase-form-section select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for table headers */
+th {
+    background-color: #0056b3;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for table cells */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for alternating row colors */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style for the actions column */
+td:last-child {
+    text-align: center;
+}
+
+/* Style for the delete button */
+form {
+    margin: 0;
+}
+
+button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hover effect for the delete button */
+button:hover {
+    background-color: #007bff;
+}
+
+.section-empty {
+    height: 30vw;
+}
+.session-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+/* Style for labels */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Style for select dropdown */
+.form-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for date and time input */
+.form-input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style for the submit button */
+.form-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover effect for the submit button */
+.form-button:hover {
+    background-color: #007bff;
+}
+
+/* Style for the buy subscription button */

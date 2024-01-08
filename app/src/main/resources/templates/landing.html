@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" th:href="@{/css/landing.css}">
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="container"><a class="navbar-brand" href="/">FITHOUSE</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto text-uppercase">
+                <li class="nav-item"><a class="nav-link" href="#abonnements">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bg-dark text-white d-flex justify-content-between align-items-center">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="/auth/registration">Регистрация</a></li>
+                <li class="nav-item"><a class="nav-link" href="/auth/login">Войти</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead">
+    <div class="container">
+        <div class="intro-text">
+            <div class="intro-lead-in"><span>Добро пожаловать в FITHOUS!</span></div>
+            <div class="intro-heading text-uppercase"><span>GO WORKOUT</span></div>
+            <a class="btn btn-primary btn-xl text-uppercase" role="button" href="#abonnements">Узнать больше</a>
+        </div>
+    </div>
+</header>
+<section id="abonnements" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Абонементы</h2>
+                <p class="text-muted">Выберите подходящий для вас вариант</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div key={index} class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Базовый</h4>
+                        <p class="card-text">$30/месяц</p>
+                        <p class="card-text">Доступ к базовым тренировкам и оборудованию</p>
+                    </div>
+                </div>
+            </div>
+            <div key={index} class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Продвинутый</h4>
+                        <p class="card-text">$50/месяц</p>
+                        <p class="card-text">Дополнительные тренировки и индивидуальные планы</p>
+                    </div>
+                </div>
+            </div>
+            <div key={index} class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Премиум</h4>
+                        <p class="card-text">$80/месяц</p>
+                        <p class="card-text">Неограниченный доступ ко всем услугам и тренировкам</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="bg-dark text-white d-flex justify-content-between align-items-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Контакты</h4>
+                <p>Телефон: +123456789</p>
+                <p>Email: info@example.com</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Социальные сети</h4>
+                <ul class="list-unstyled d-flex">
+                    <li><button type="button">Facebook</button></li>
+                    <li><button type="button">Twitter</button></li>
+                    <li><button type="button">Instagram</button></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>О нас</h4>
+                <p>Наша миссия - предоставить лучшие услуги по фитнесу и заботиться о вашем здоровье.</p>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p>&copy; 2023 Ваша Компания. Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
